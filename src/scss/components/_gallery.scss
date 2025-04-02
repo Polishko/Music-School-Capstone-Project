@@ -1,0 +1,170 @@
+@use "sass:color" as color;
+@use "../variables" as *;
+@use "../mixins" as *;
+@use "../placeholders" as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: $color-card;
+  border: 1px solid $color-border;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgb(233 69 96 / 30%);
+
+  .card-title {
+    flex-basis: 100%;
+    color: $color-text-secondary;
+    margin-bottom: 1rem;
+  }
+
+  .instrument {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .card-meta {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-basis: 100%;
+    text-align: center;
+
+    .topics-title {
+      @include apply-color-shift($color-text-secondary, -20%, text);
+
+      font-weight: $font-weight-bold;
+      margin-bottom: 1rem;
+    }
+
+    .course-topics {
+      @extend %card-meta;
+
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+      min-height: 100px;
+
+      li {
+        details {
+          @include apply-color-shift($color-bg, 5%, background);
+
+          border: 1px solid $color-border;
+          border-radius: 8px;
+          padding: 0.75rem 1rem;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          summary {
+            font-weight: $font-weight-bold;
+            cursor: pointer;
+            outline: none;
+          }
+
+          p {
+            margin-top: 0.5rem;
+            line-height: 1.4;
+            font-size: 0.95rem;
+            color: $color-text-primary;
+          }
+
+          &:hover {
+            @include apply-color-shift($color-bg, 10%, background);
+          }
+
+          @media (width <= $breakpoint-md) {
+            font-size: 0.8rem;
+          }
+        }
+      }
+
+      @media (width <= $breakpoint-sm) {
+        @include stack-on-mobile;
+      }
+    }
+
+    @media (width <= $breakpoint-md) {
+      @include stack-on-mobile;
+    }
+  }
+
+  .extra-details {
+    margin: 0.2rem auto;
+    display: flex;
+    gap: 0.5rem;
+    text-align: center;
+
+    strong {
+      @include apply-color-shift($color-text-secondary, -20%, text);
+    }
+
+    @media (width <= $breakpoint-sm) {
+      @include stack-on-mobile;
+    }
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 0.5rem;
+
+    .card-image {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 0.5rem;
+      display: block;
+
+      @media (width <= $breakpoint-sm) {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+      }
+    }
+  }
+
+  .card-video-button-wrapper {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .card-video {
+      .video-title {
+        color: $color-success;
+      }
+    }
+
+    .enroll-button {
+      background-color: $color-button-bg;
+      color: $color-button-text;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        @include apply-color-shift($color-button-bg, 10%, background);
+      }
+
+      &:disabled {
+        background-color: gray;
+        color: $color-text-secondary;
+        cursor: not-allowed;
+
+        &:hover {
+          background-color: gray;
+          color: $color-text-secondary;
+        }
+      }
+    }
+  }
+}

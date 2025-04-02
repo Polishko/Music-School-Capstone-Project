@@ -1,0 +1,50 @@
+@use "../variables" as *;
+
+.footer {
+  background-color: $color-accent;
+  color: $color-text-primary;
+  padding: $spacing-lg $spacing-md;
+  text-align: center;
+  font-size: $font-size-sm;
+  border-top: 1px solid $color-border;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  margin-top: 2rem;
+
+  .footer-copy {
+    @media (width <= $breakpoint-md) {
+      font-size: 0.85rem;
+    }
+  
+    @media (width <= $breakpoint-sm) {
+      font-size: 0.75rem;
+  
+      .footer-socials {
+        gap: $spacing-sm;
+      }
+    }
+  }
+
+  .footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-md;
+
+    .social-icon {
+      font-size: 1.25rem;
+      text-decoration: none;
+      color: $color-button-text;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $color-success;
+      }
+    }
+    
+    @media (width <= $breakpoint-sm) {
+        gap: $spacing-sm;
+    }
+  }
+}

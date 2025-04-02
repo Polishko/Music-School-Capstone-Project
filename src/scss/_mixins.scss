@@ -1,0 +1,24 @@
+@use "variables" as *;
+@use "sass:color";
+
+@mixin stack-on-mobile {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@mixin apply-color-shift($base-color, $lightness: 0%, $property: background, $as-gradient: false) {
+  $adjusted-color: color.adjust($base-color, $lightness: $lightness);
+
+  @if $as-gradient {
+    background: linear-gradient(
+      135deg,
+      $base-color,
+      $adjusted-color
+    );
+  } @else if $property == background {
+    background-color: $adjusted-color;
+  } @else if $property == text {
+    color: $adjusted-color;
+  }
+}

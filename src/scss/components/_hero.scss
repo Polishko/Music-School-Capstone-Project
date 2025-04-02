@@ -1,0 +1,119 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.hero {
+  .hero-slider {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .slides-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 /9;
+
+      .slides {
+        position: relative;
+        display: none;
+
+        img {
+          width: 100%;
+          aspect-ratio: 16 /9;
+          object-fit: cover;
+          margin: 0 auto;
+          box-shadow: 0 4px 12px rgb(0 0 0 / 40%),
+            inset 0 0 10px rgb($color-border, 30%);
+        }
+      }
+    }
+
+    .number-text {
+      color: $color-text-primary;
+      padding: 1rem;
+      position: absolute;
+      top: 0;
+    }
+
+    .prev {
+      left: 0;
+      border-radius: 0 3px 3px 0;
+    }
+
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .prev,
+    .next {
+      @include apply-color-shift($color-button-bg, 20%, text);
+
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      padding: 1rem;
+      font-size: 1.25rem;
+      font-weight: $font-weight-bold;
+      cursor: pointer;
+      user-select: none;
+      background-color: transparent;
+      border: none;
+
+      &:hover {
+        background-color: $color-card;
+      }
+    }
+
+    .caption-container {
+      text-align: center;
+      background-color: $color-card;
+      padding: 0.3rem;
+      color: $color-text-primary;
+      margin: 1rem auto;
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: $spacing-sm;
+      margin-top: 0.75rem;
+    }
+
+    .column {
+      flex: 0 0 calc(100% / 6);
+      max-width: calc(100% / 6);
+
+      @media (width <= $breakpoint-lg) {
+        flex: 0 0 calc(100% / 4);
+        max-width: calc(100% / 4);
+      }
+
+      @media (width <= $breakpoint-md) {
+        flex: 0 0 calc(100% / 3);
+        max-width: calc(100% / 3);
+      }
+
+      @media (width <= $breakpoint-sm) {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+    }
+
+    .demo {
+      opacity: 0.6;
+      transition: opacity 0.3s;
+    }
+
+    .demo:hover,
+    .demo.active {
+      opacity: 1;
+    }
+
+    .cursor {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+@use "sass:color";
+@use "variables" as *;
+
+body {
+  background-color: $color-bg;
+  color: $color-text-primary;
+  padding-inline: clamp($spacing-sm, 5%, $spacing-lg);
+  padding-block: 1rem;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.header {
+  grid-area: header;
+}
+
+.page-layout {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
+
+  .header {
+    grid-area: header;
+  }
+
+  .main-content {
+    grid-area: main;
+    gap: 2rem;
+
+    &.main--home {
+      display: grid;
+      grid-template-areas: "hero";
+      grid-template-rows: auto;
+
+      .hero {
+        grid-area: hero;
+      }
+    }
+
+    &.main--gallery {
+      display: grid;
+      grid-template-areas:
+        "filters"
+        "gallery"
+        "pagination";
+      grid-template-rows: auto 1fr auto;
+
+      .gallery {
+        grid-area: gallery;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 1.5rem;
+        justify-items: center;
+
+        article.card {
+          max-width: 600px;
+          width: 100%;
+        }
+
+        @media (width <= $breakpoint-sm) {
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+      }
+
+      .pagination-container {
+        grid-area: pagination;
+      }
+    }
+  }
+
+  .footer {
+    grid-area: footer;
+  }
+}

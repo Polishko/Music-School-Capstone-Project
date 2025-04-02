@@ -1,0 +1,67 @@
+@use "variables" as *;
+@use "variables" as *;
+
+body {
+  font-family: $font-base;
+  font-weight: $font-weight-regular;
+
+  li {
+    font-size: 0.9rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $font-heading;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-heading;
+    color: $color-text-primary;
+  }
+
+  h1 { font-size: 2.25rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.75rem; }
+  h4 { font-size: 1.5rem; }
+  h5 { font-size: 1.25rem; }
+  h6 { font-size: 1rem; }
+
+  p {
+    font-size: 1rem;
+    color: $color-text-secondary;
+  }
+
+  strong { font-weight: 600; }
+  em { font-style: italic; }
+
+  ul, ol {
+    margin-bottom: 1rem;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+}
+
+@media (width <= $breakpoint-md) {
+  body { font-size: 1.05rem; }
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.25rem; }
+  h5 { font-size: 1.1rem; }
+  h6 { font-size: 0.95rem; }
+}
+
+@media (width <= $breakpoint-sm) {
+  body { font-size: 1rem; }
+  h1 { font-size: 1.65rem; }
+  h2 { font-size: 1.3rem; }
+  h3 { font-size: 1.25rem; }
+  h4 { font-size: 1rem; }
+  h5 { font-size: 0.95rem; }
+  h6 { font-size: 0.8rem; }
+}

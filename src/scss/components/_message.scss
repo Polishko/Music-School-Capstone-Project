@@ -1,0 +1,23 @@
+@use "../variables" as *;
+
+.message {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    margin-block: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+  
+    &.error {
+      background-color: rgb(255 0 0 / 10%);
+      color: $color-error;
+      border: 1px solid $color-error;
+    }
+  
+    &.info {
+      background-color: rgba(0 0 255 / 10%);
+      color: $color-text-secondary;
+      border: 1px solid $color-text-secondary;
+    }
+  }
+  

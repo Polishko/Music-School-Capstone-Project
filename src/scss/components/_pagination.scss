@@ -1,0 +1,52 @@
+@use "sass:color";
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  min-height: 2.5rem;
+
+  button {
+    background-color: $color-card;
+    color: $color-text-primary;
+    border: 1px solid $color-border;
+    border-radius: 6px;
+    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+      background-color: color.adjust($color-button-bg, $lightness: 10%);
+      color: $color-button-text;
+      transform: translateY(-1px);
+    }
+
+    &.active {
+      background-color: $color-success;
+      color: #000;
+      font-weight: $font-weight-bold;
+      border-color: transparent;
+    }
+
+    &:disabled {
+      @include apply-color-shift(
+        $color-bg,
+        $lightness: 10%,
+        $property: background
+      );
+
+      color: $color-text-secondary;
+      cursor: not-allowed;
+    }
+  }
+
+  @media (width <= $breakpoint-sm) {
+    gap: 0.25rem;
+    padding-inline: 0.5rem;
+  }
+}

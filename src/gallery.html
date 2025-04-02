@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music School Preview</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="icon" href="data:,">
+    <script type="module" src="js/gallery.js"></script>
+  </head>
+  <body>
+    <div class="page-layout">
+      <header class="header">
+        <div class="header-top">
+          <h1 class="logo">
+            <a href="index.html">
+              <span class="logo-icon">🎵</span> My Music School
+            </a>
+          </h1>
+        </div>
+
+        <div class="promo-banner">
+          <h2>Inspire Your Music Journey</h2>
+          <h4>
+            From beginner to advanced — find the perfect course for your
+            passion.
+          </h4>
+        </div>
+
+        <nav class="nav">
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li class="submenu">
+              <a href="gallery.html" class="nav-link submenubtn"
+                >Courses <i class="fa fa-caret-down"></i
+              ></a>
+              <ul class="submenu-content">
+                <li>
+                  <a class="all-courses" href="gallery.html#all-courses"
+                    >All Courses</a
+                  >
+                </li>
+                <li>
+                  <a class="my-courses" href="gallery.html#my-courses"
+                    >My Courses</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="main-content main--gallery">
+        <div class="filters">
+
+          <input type="text" id="searchInput" placeholder="Search courses..." />
+
+          <select id="instrumentFilter">
+            <option value="">All instruments</option>
+            <option value="Piano">🎹 Piano</option>
+            <option value="Flute">🪈 Flute</option>
+            <option value="Guitar">🎸 Guitar</option>
+            <option value="Violin">🎻 Violin</option>
+            <option value="Vocals">🎤 Vocals</option>
+          </select>
+
+          <div id="level-filter">
+            <label
+              ><input type="radio" name="level" value="" />All levels</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="level"
+                value="Beginner"
+              />Beginner</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="level"
+                value="Intermediate"
+              />Intermediate</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="level"
+                value="Advanced"
+              />Advanced</label
+            >
+          </div>
+
+          <select id="sortOptions">
+            <option value="">Sort by...</option>
+            <option value="title-asc">Title (A–Z)</option>
+            <option value="instructor-asc">Instructor (A–Z)</option>
+            <option value="level-asc">Level (A–Z)</option>
+          </select>
+
+          <button id="reset-filters">Reset</button>
+        </div>
+        <section class="gallery"></section>
+        <div class="pagination-container"></div>
+      </main>
+
+      <footer class="footer">
+        <p class="footer-copy">© 2025 My Music School. All rights reserved.</p>
+
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook" class="social-icon"><i class="fa-brands fa-square-facebook"></i></a>
+          <a href="#" aria-label="Instagram" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

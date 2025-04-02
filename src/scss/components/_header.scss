@@ -1,0 +1,215 @@
+@use "sass:color" as color;
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.header {
+  background: linear-gradient(135deg, $color-accent, $color-button-bg);
+  color: $color-button-text;
+  border-radius: 0.5rem;
+  padding-inline: clamp(1rem, 4vw, 2rem);
+  padding-top: 1rem;
+  text-align: center;
+  border-bottom: 2px solid rgb(255 255 255 / 10%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .logo {
+      font-family: $font-heading;
+      font-weight: $font-weight-bold;
+      font-size: 3rem;
+      letter-spacing: 0.5px;
+      text-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+      color: $color-text-primary;
+      flex-basis: 100%;
+
+      .logo-icon {
+        filter: brightness(1.5);
+
+        @media (width <= $breakpoint-sm) {
+          font-size: 80%;
+        }
+      }
+
+      a {
+        display: inline-block;
+        cursor: pointer;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      @media (width <= $breakpoint-md) {
+        font-size: 2.2rem;
+      }
+    }
+  }
+
+  .promo-banner {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    border-radius: 1rem;
+    background: linear-gradient(
+        135deg,
+        rgb(15 52 96 / 40%),
+        rgb(233 69 96 / 30%)
+      ),
+      url("../images/banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 15%),
+      inset 0 0 30px rgb(255 255 255 / 10%);
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 20%,
+      black 80%,
+      transparent 100%
+    );
+    /* stylelint-disable-next-line property-no-vendor-prefix */
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 20%,
+      black 80%,
+      transparent 100%
+    );
+
+    h2 {
+      font-family: $font-heading;
+      margin-bottom: 0.5rem;
+      color: $color-text-secondary;
+
+      @media (width <= $breakpoint-sm) {
+        font-size: 1.8rem;
+      }
+    }
+
+    h4 {
+      color: $color-text-primary;
+      margin-bottom: 1rem;
+
+      @media (width <= $breakpoint-sm) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-text-primary;
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+      padding: 0;
+
+      li {
+        font-size: 1.4rem;
+
+        a.nav-link {
+          text-decoration: none;
+          cursor: pointer;
+          display: inline-block;
+          font-weight: $font-weight-bold;
+          text-shadow: 0 1px 2px rgb(0 0 0 / 30%);
+
+          @include apply-color-shift(
+            color.mix(white, $color-button-bg, 40%),
+            0%,
+            text
+          );
+
+          &.active {
+            color: $color-success;
+
+            &:hover {
+              color: $color-success;
+              text-decoration: none;
+              cursor: default;
+            }
+          }
+
+          &:hover {
+            color: $color-success;
+
+            @include apply-color-shift($color-text-secondary, -10%, text);
+          }
+        }
+
+        @media (width <= $breakpoint-md) {
+          font-size: 1.2rem;
+        }
+
+        @media (width <= $breakpoint-sm) {
+          font-size: 1rem;
+        }
+      }
+
+      @media (width <= $breakpoint-md) {
+        @include stack-on-mobile;
+
+        gap: 0.5rem;
+      }
+    }
+
+    .submenu {
+      position: relative;
+
+      .submenu-content {
+        @include apply-color-shift($color-card, 20%, background);
+
+        display: none;
+        position: absolute;
+        padding: 0.3rem;
+        border-radius: 0.5rem;
+        top: 100%;
+        left: 0;
+        z-index: 10;
+
+        a {
+          color: $color-text-primary;
+          font-size: 0.8em;
+          display: block;
+          min-width: 150px;
+          cursor: pointer;
+
+          &.show {
+            display: block;
+          }
+
+          @media (width <= $breakpoint-md) {
+            font-size: $font-size-sm;
+          }
+        }
+
+        @media (width <= $breakpoint-md) {
+          flex-direction: row;
+          gap: 0;
+        }
+      }
+
+      &:hover .submenu-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+    }
+
+    @media (width <= $breakpoint-md) {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
