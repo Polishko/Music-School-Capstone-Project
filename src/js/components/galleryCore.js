@@ -32,7 +32,7 @@ export function loadCourses() {
         let processedData = [...data];
 
         if (sort) {
-          sortCourses(processedData, sort);
+          processedData = sortCourses(processedData, sort);
         }
 
         const hasFilters = Object.keys(filterCriteria).length > 0;
@@ -48,7 +48,7 @@ export function loadCourses() {
           processedData = searchCourses(processedData, searchTerm);
         }
 
-        const itemsPerPage = 10;
+        const itemsPerPage = 8;
         const totalPages = Math.ceil(processedData.length / itemsPerPage);
         let currentPage = 1;
 
@@ -76,7 +76,7 @@ export function loadCourses() {
     });
 }
 
-function renderCourseCards(data, currentPage = 1, itemsPerPage = 10) {
+function renderCourseCards(data, currentPage = 1, itemsPerPage = 8) {
   const gallery = document.querySelector(".gallery");
   gallery.innerHTML = "";
 

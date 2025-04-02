@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "sass src/scss/main.scss src/css/style.css",
+    "compile": "npx sass src/scss/main.scss src/css/style.css",
     "lint": "npm run lint:js && npm run lint:styles",
     "lint:js": "eslint .",
-    "lint:styles": "stylelint \"**/*.scss\""
+    "lint:styles": "stylelint \"**/*.scss\"",
+    "build:ts": "tsc"
   },
   "repository": {
     "type": "git",
@@ -21,9 +22,11 @@
     "@eslint/js": "^9.23.0",
     "eslint": "^9.23.0",
     "globals": "^16.0.0",
+    "sass": "^1.86.1",
     "stylelint": "^16.17.0",
     "stylelint-config-standard-scss": "^14.0.0",
     "stylelint-scss": "^6.11.1",
+    "typescript": "^5.8.2",
     "typescript-eslint": "^8.29.0"
   }
 }

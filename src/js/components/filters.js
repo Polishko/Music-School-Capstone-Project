@@ -32,7 +32,7 @@ export function applyFilterEvents() {
 export function applySortingEvents() {
   const dataSort = document.getElementById("sortOptions");
   dataSort?.addEventListener("change", (e) => {
-    applySort("sort", e);
+    applySort(e);
     loadCourses();
   });
 }
