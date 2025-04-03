@@ -11,10 +11,6 @@
     "lint:styles": "stylelint \"**/*.scss\"",
     "build:ts": "tsc"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@autocode.git.epam.com:nalanbilgin/capstone-project-template.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
