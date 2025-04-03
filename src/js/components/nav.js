@@ -29,14 +29,12 @@ export function showMyCourses() {
     document.querySelector(".pagination-container").innerHTML = "";
   } else {
     const filters = getSessionStoredFilters();
-    if (filters.length) {
-      sessionStorage.removeItem("filters");
-    } else {
-      filters.general = "my-courses";
-      sessionStorage.setItem("filters", JSON.stringify(filters));
-    }
+
+    filters.general = "my-courses" ;
+    sessionStorage.setItem("filters", JSON.stringify(filters));
 
     loadCourses();
+  }
   }
 }
 
