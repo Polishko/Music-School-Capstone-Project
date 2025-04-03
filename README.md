@@ -3,6 +3,7 @@
 This is a responsive web application project for a music school learning platform, built using **HTML**, **Sass (SCSS)**, and **vanilla JavaScript**. The project structure follows EPAM’s predefined template and uses local JSON data.
 
 ---
+Deploy for testing: https://project-deploy-test.onrender.com/
 
 ## 📦 Prerequisites
 
