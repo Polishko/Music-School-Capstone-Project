@@ -50,7 +50,7 @@ export function loadCourses() {
 
         const itemsPerPage = 8;
         const totalPages = Math.ceil(processedData.length / itemsPerPage);
-        let currentPage = 1;
+        const currentPage = 1;
 
         if (!processedData.length) {
           displayMessage("gallery", "p", "message info", "No courses found.");
@@ -63,6 +63,13 @@ export function loadCourses() {
             itemsPerPage
           );
         }
+      } else {
+        displayMessage(
+          "gallery",
+          "p",
+          "message info",
+          "No courses available yet."
+        );
       }
     })
     .catch((error) => {
@@ -80,8 +87,8 @@ function renderCourseCards(data, currentPage = 1, itemsPerPage = 8) {
   const gallery = document.querySelector(".gallery");
   gallery.innerHTML = "";
 
-  let start = (currentPage - 1) * itemsPerPage;
-  let end = start + itemsPerPage;
+  const start = (currentPage - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
   const pageData = data.slice(start, end);
 
   for (const course of pageData) {
@@ -174,7 +181,15 @@ function renderCourseCards(data, currentPage = 1, itemsPerPage = 8) {
       disableCourseEnroll(course.id);
     });
 
-    article.querySelector(".topic-wrapper").append(ul);
+    const topicDiv = article.querySelector(".topic-wrapper");
+    if (course.topics.length) {
+      topicDiv.append(ul);
+    } else {
+      const fallbackMessage = document.createElement("p");
+      fallbackMessage.className = "message info";
+      fallbackMessage.textContent = "No topics listed.";
+      topicDiv.append(fallbackMessage);
+    }
 
     gallery.append(article);
 

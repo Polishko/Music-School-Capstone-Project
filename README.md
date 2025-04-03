@@ -17,16 +17,22 @@ Please install the following:
 
 ## 🚀 Project Setup
 
-1. Clone the repository:
-
-2. Initialize and install dependencies (optional if you later add npm packages):
+1. Clone the repository
+2. Open the folder in VS Code
+3. Initialize and install dependencies (optional if you later add npm packages):
    ```bash
    npm install
    ```
-3. Compile Sass files:
+4. Compile Sass files:
    ```bash
    npm run compile
    ```
+5. Compile TS files:
+   ```bash
+npm run build:ts
+   ```
+
+6. Right-click `index.html` and choose **"Open with Live Server"**
 
 ## 📁 Folder Structure
 
