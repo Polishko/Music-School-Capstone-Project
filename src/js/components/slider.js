@@ -2,15 +2,16 @@ let slideIndex = 1;
 showSlides(slideIndex);
 
 export function plusSlides(n) {
-  showSlides((slideIndex += n));
+  slideIndex += n;
+  showSlides(slideIndex);
 }
 
 export function currentSlide(n) {
-  showSlides((slideIndex = n));
+  slideIndex = n;
+  showSlides(slideIndex);
 }
 
 function showSlides(n) {
-  let i;
   let slides = document.getElementsByClassName("slides");
   let dots = document.getElementsByClassName("demo");
   let captionText = document.getElementById("caption");
@@ -23,11 +24,11 @@ function showSlides(n) {
     slideIndex = slides.length;
   }
 
-  for (i = 0; i < slides.length; i++) {
+  for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
 
-  for (i = 0; i < dots.length; i++) {
+  for (let i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
 
