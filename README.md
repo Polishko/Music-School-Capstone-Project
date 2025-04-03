@@ -29,7 +29,7 @@ Please install the following:
    ```
 5. Compile TS files:
    ```bash
-npm run build:ts
+   npm run build:ts
    ```
 
 6. Right-click `index.html` and choose **"Open with Live Server"**
