@@ -20,3 +20,5 @@ export type FilterKey = "instrument" | "level" | "general" | "sort";
 export type Filters = Partial<Record<FilterKey, string>>;
 
 export type SortCriteria = "title-asc" | "instructor-asc" | "level-asc";
+
+export type EnrolledCourses = number[];

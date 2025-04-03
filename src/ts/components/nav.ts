@@ -1,8 +1,14 @@
 import { loadCourses } from "./galleryCore.js";
-import { displayMessage, getEnrolledCourses, getSessionStoredFilters } from "../utils.js";
+import {
+  displayMessage,
+  getEnrolledCourses,
+  getSessionStoredFilters,
+} from "../utils.js";
 
 export function highlightActiveNavLink(): void {
-  const links = document.querySelectorAll(".nav-link") as NodeListOf<HTMLAnchorElement>;
+  const links = document.querySelectorAll(
+    ".nav-link"
+  ) as NodeListOf<HTMLAnchorElement>;
   const currentPage = window.location.pathname;
 
   links.forEach((link) => {
@@ -15,7 +21,7 @@ export function highlightActiveNavLink(): void {
   });
 }
 
-export function showMyCourses() {
+export function showMyCourses(): void {
   const enrolled = getEnrolledCourses();
 
   if (enrolled.length === 0) {
@@ -26,21 +32,25 @@ export function showMyCourses() {
       "You haven`t enrolled to any course yet."
     );
 
-    document.querySelector(".pagination-container").innerHTML = "";
+    const paginationContainer = document.querySelector(
+      ".pagination-container"
+    ) as HTMLDivElement | null;
+
+    if (paginationContainer) {
+      paginationContainer.innerHTML = "";
+    }
   } else {
     const filters = getSessionStoredFilters();
-    if (filters.length) {
-      sessionStorage.removeItem("filters");
-    } else {
+
+    if (filters.general !== "my-courses") {
       filters.general = "my-courses";
       sessionStorage.setItem("filters", JSON.stringify(filters));
+      loadCourses();
     }
-
-    loadCourses();
   }
 }
 
-export function makeSubMenuClickableOnMobile() {
+export function makeSubMenuClickableOnMobile(): void {
   document.querySelector(".submenubtn")?.addEventListener("click", (e) => {
     e.preventDefault();
     document.querySelector(".submenu-content")?.classList.toggle("show");

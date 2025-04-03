@@ -1,4 +1,4 @@
-import { Course, FilterKey, Filters, SortCriteria } from "./types.js";
+import { Course, EnrolledCourses, FilterKey, Filters, SortCriteria } from "./types.js";
 
 export function displayMessage(
   container: string,
@@ -13,7 +13,7 @@ export function displayMessage(
   }
 }
 
-export function getEnrolledCourses(): number[] {
+export function getEnrolledCourses(): EnrolledCourses {
   return JSON.parse(localStorage.getItem("enrolledCourses") || "[]");
 }
 

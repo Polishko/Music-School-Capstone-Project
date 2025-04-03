@@ -1,5 +1,9 @@
 import { loadCourses } from "./galleryCore.js";
-import { displayMessage, getEnrolledCourses, getSessionStoredFilters } from "../utils.js";
+import {
+  displayMessage,
+  getEnrolledCourses,
+  getSessionStoredFilters,
+} from "../utils.js";
 
 export function highlightActiveNavLink() {
   const links = document.querySelectorAll(".nav-link");
@@ -34,7 +38,6 @@ export function showMyCourses() {
     sessionStorage.setItem("filters", JSON.stringify(filters));
 
     loadCourses();
-  }
   }
 }
 
