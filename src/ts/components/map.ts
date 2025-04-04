@@ -1,7 +1,13 @@
-export function injectMapWithLocation(): void {
-  const mapContainer = document.querySelector(
-    ".map-container"
-  ) as HTMLDivElement | null;
+/**
+ * Injects a Google Map iframe into the designated container.
+ * Clears existing content before inserting the map.
+ */
+
+export function injectMapWithLocation(containerClass: string = "map-container"): void {
+  const mapContainer = document.querySelector(`.${containerClass}`) as HTMLDivElement | null;
+
+  if (!mapContainer) return;
+
   if (mapContainer) {
     while (mapContainer.firstChild) {
       mapContainer.removeChild(mapContainer.firstChild);
