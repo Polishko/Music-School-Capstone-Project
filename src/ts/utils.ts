@@ -178,3 +178,19 @@ export function createHtmlItem(
 
   return element;
 }
+
+export function toggleDetailsParagraph(): void {
+  const allDetails = document.querySelectorAll("details") as NodeListOf<HTMLDetailsElement>;
+
+  allDetails.forEach((detail) => {
+    detail.addEventListener("click", (e: Event) => {
+      const clickedElement = e.target as HTMLElement;
+
+      if (!clickedElement.closest("summary")) {
+        detail.open = !detail.open;
+        e.preventDefault();
+      }
+    });
+  });
+}
+
