@@ -1,0 +1,314 @@
+[
+  {
+    "id": 1,
+    "title": "Piano Basics for Beginners",
+    "instrument": "🎹 Piano",
+    "level": "Beginner",
+    "instructor": "Anna Petkova",
+    "image": "piano1.jpg",
+    "description": "Learn to read sheet music and perform basic finger warm-ups in this intro piano course.",
+    "video": "<video controls width='300'><source src='demo-piano1.mp4' type='video/mp4'>Your browser does not support the video tag.</video>",
+    "topics": [
+      {
+        "title": "🎵 Music Reading",
+        "content": "Learn to identify notes, rhythms, and symbols used in basic sheet music. Develop foundational reading skills for melody and timing."
+      },
+      {
+        "title": "🎹 Finger Exercises",
+        "content": "Practice beginner-friendly exercises that improve finger independence, strength, and agility on the piano keys."
+      },
+      {
+        "title": "👐 Hand Positioning",
+        "content": "Develop proper hand posture to play comfortably and reduce the risk of injury."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Intermediate Piano Harmony",
+    "instrument": "🎹 Piano",
+    "level": "Intermediate",
+    "instructor": "Ivan Kolev",
+    "image": "piano2.jpg",
+    "description": "Explore rich piano harmonies, develop your chord vocabulary, and start improvising freely.",
+    "video": "<video controls width='300'><source src='demo-piano2.mp4' type='video/mp4'>Your browser does not support the video tag.</video>",
+    "topics": [
+      {
+        "title": "🎼 Chord Progressions",
+        "content": "Understand how chords move in a musical context and apply them creatively."
+      },
+      {
+        "title": "🎹 Improvisation",
+        "content": "Learn to express your musical ideas in real-time using scales and harmony."
+      },
+      {
+        "title": "🔍 Harmonic Structure",
+        "content": "Analyze the harmony of your favorite songs and apply similar structures in your playing."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Lead Guitar Techniques",
+    "instrument": "🎸 Guitar",
+    "level": "Advanced",
+    "instructor": "Stoyan Dimitrov",
+    "image": "guitar1.jpg",
+    "description": "Master advanced electric guitar skills with focus on soloing, bending, and fast runs.",
+    "video": "<video controls width='300'><source src='demo-guitar1.mp4' type='video/mp4'>Your browser does not support the video tag.</video>",
+    "topics": [
+      {
+        "title": "🎼 Scales",
+        "content": "Use scales as the foundation for lead guitar improvisation and melody."
+      },
+      {
+        "title": "🎯 String Bending",
+        "content": "Add emotion and fluidity to your solos with precise bending techniques."
+      },
+      {
+        "title": "🔥 Soloing",
+        "content": "Combine licks and phrasing to create expressive, professional guitar solos."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Acoustic Guitar for Starters",
+    "instrument": "🎸 Guitar",
+    "level": "Beginner",
+    "instructor": "Maya Ivanova",
+    "image": "guitar2.jpg",
+    "description": "Start your acoustic guitar journey with open chords and rhythm techniques.",
+    "video": "<video controls width='300'><source src='demo-guitar2.mp4' type='video/mp4'>Your browser does not support the video tag.</video>",
+    "topics": [
+      {
+        "title": "🎶 Open Chords",
+        "content": "Learn essential open chord shapes and how to transition smoothly between them."
+      },
+      {
+        "title": "🥁 Strumming Patterns",
+        "content": "Develop rhythm skills through common strumming techniques."
+      },
+      {
+        "title": "🖐️ Basic Fingerpicking",
+        "content": "Explore introductory patterns to add texture and depth to your playing."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Flute Breathing Mastery",
+    "instrument": "🪈 Flute",
+    "level": "Intermediate",
+    "instructor": "Teodora Nikolova",
+    "image": "flute1.jpg",
+    "description": "Improve your tone and control through focused breathing and phrasing exercises.",
+    "video": "<video controls width='300'><source src='demo-flute1.mp4' type='video/mp4'>Your browser does not support the video tag.</video>",
+    "topics": [
+      {
+        "title": "🌬️ Breath Control",
+        "content": "Train your diaphragm and breath support for longer, more controlled phrases."
+      },
+      {
+        "title": "🎵 Tone Quality",
+        "content": "Focus on embouchure and air stream to refine your flute sound."
+      },
+      {
+        "title": "🎶 Phrasing",
+        "content": "Learn to shape musical lines expressively with breath and articulation."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Violin Fundamentals",
+    "instrument": "🎻 Violin",
+    "level": "Beginner",
+    "instructor": "Daniela Stancheva",
+    "image": "violin1.jpg",
+    "description": "A perfect start for violin learners, focusing on bow hold, posture, and open string play.",
+    "video": "<video controls width='300'><source src='demo-violin1.mp4' type='video/mp4'>Your browser does not support the video tag.</video>",
+    "topics": [
+      {
+        "title": "🎻 Posture",
+        "content": "Develop correct violin and bow hold to ensure a strong foundation."
+      },
+      {
+        "title": "🪶 Basic Bowing",
+        "content": "Practice straight bow strokes and smooth transitions."
+      },
+      {
+        "title": "🎼 Tuning",
+        "content": "Learn how to tune your instrument using pegs and fine tuners."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Advanced Violin Performance",
+    "instrument": "🎻 Violin",
+    "level": "Advanced",
+    "instructor": "Viktor Todorov",
+    "image": "violin2.jpg",
+    "description": "Perform demanding pieces from the classical repertoire and refine your tone.",
+    "video": "<video controls width='300'><source src='demo-violin2.mp4' type='video/mp4'>Your browser does not support the video tag.</video>",
+    "topics": [
+      {
+        "title": "🎼 Concert Pieces",
+        "content": "Interpret advanced violin works with expression and technical precision."
+      },
+      {
+        "title": "🏹 Advanced Bowing",
+        "content": "Refine your control over various bowing techniques and articulations."
+      },
+      {
+        "title": "🎭 Stage Presence",
+        "content": "Enhance your performance confidence and audience engagement."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Jazz Improvisation for Piano",
+    "instrument": "🎹 Piano",
+    "level": "Advanced",
+    "instructor": "Nina Georgieva",
+    "image": "piano3.jpg",
+    "description": "Discover voicings and comping patterns that will level up your jazz piano playing.",
+    "video": "<video controls width='300'><source src='demo-jazz-piano.mp4' type='video/mp4'>Your browser does not support the video tag.</video>",
+    "topics": [
+      {
+        "title": "🎹 Jazz Voicings",
+        "content": "Learn rich chord voicings to add color and complexity to your playing."
+      },
+      {
+        "title": "🎷 Comping",
+        "content": "Master rhythmic accompaniment behind soloists in a jazz context."
+      },
+      {
+        "title": "🎶 Improvisation",
+        "content": "Explore phrasing, call-and-response, and spontaneous soloing techniques."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Pop Vocal Coaching",
+    "instrument": "🎤 Vocals",
+    "level": "Intermediate",
+    "instructor": "Kristina Ruseva",
+    "image": "vocals1.jpg",
+    "description": "Train your voice with pop vocal techniques, expression, and tone control.",
+    "video": "<video controls width='300'><source src='demo-vocals1.mp4' type='video/mp4'>Your browser does not support the video tag.</video>",
+    "topics": [
+      {
+        "title": "🎤 Tone",
+        "content": "Develop consistent vocal tone for different pop genres."
+      },
+      {
+        "title": "🎵 Vocal Style",
+        "content": "Adapt your voice to suit pop styles and artist inspirations."
+      },
+      {
+        "title": "🌬️ Breath Control",
+        "content": "Strengthen breathing technique to support long and powerful phrases."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Solfège & Ear Training",
+    "instrument": "🎼 Theory",
+    "level": "All Levels",
+    "instructor": "Zornitsa Petrova",
+    "image": "theory1.jpg",
+    "description": "Sharpen your musical ear through solfège, interval recognition, and rhythmic practice.",
+    "video": "<video controls width='300'><source src='demo-theory1.mp4' type='video/mp4'>Your browser does not support the video tag.</video>",
+    "topics": [
+      {
+        "title": "🔔 Intervals",
+        "content": "Identify and sing musical intervals by ear."
+      },
+      {
+        "title": "⏱️ Rhythm Exercises",
+        "content": "Practice clapping and reading rhythm patterns in various time signatures."
+      },
+      {
+        "title": "🎧 Pitch Recognition",
+        "content": "Improve your ability to recognize and reproduce musical notes by ear."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Children's Music Class",
+    "instrument": "🪇 Multi",
+    "level": "Beginner",
+    "instructor": "Raya Dimitrova",
+    "image": "kids1.jpg",
+    "description": "Fun and interactive intro to sound, rhythm, and musical games for kids aged 4–7.",
+    "video": "<video controls width='300'><source src='demo-kids1.mp4' type='video/mp4'>Your browser does not support the video tag.</video>",
+    "topics": [
+      {
+        "title": "🎲 Rhythm Games",
+        "content": "Interactive games to develop timing and coordination."
+      },
+      {
+        "title": "🎵 Pitch Play",
+        "content": "Explore high and low sounds through songs and toys."
+      },
+      {
+        "title": "🔍 Sound Exploration",
+        "content": "Discover sound with everyday objects and instruments."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Folk Singing Workshop",
+    "instrument": "🎧 Vocals",
+    "level": "Intermediate",
+    "instructor": "Elena Boyanova",
+    "image": "vocals2.jpg",
+    "description": "Explore traditional Bulgarian folk singing with ornamentation and open-throat technique.",
+    "video": "<video controls width='300'><source src='demo-folk.mp4' type='video/mp4'>Your browser does not support the video tag.</video>",
+    "topics": [
+      {
+        "title": "🎙️ Bulgarian Ornamentation",
+        "content": "Learn decorative vocal styles unique to Bulgarian folk music."
+      },
+      {
+        "title": "🎶 Open-throat Singing",
+        "content": "Practice vocal production techniques for volume and resonance."
+      },
+      {
+        "title": "🪗 Folk Traditions",
+        "content": "Understand the cultural context and stories behind folk songs."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Choir Harmony Essentials",
+    "instrument": "🎤 Vocals",
+    "level": "Beginner",
+    "instructor": "Tsvetan Iliev",
+    "image": "vocals3.jpg",
+    "description": "Step into the world of group singing. Learn to blend, follow a conductor, and hold harmony parts confidently.",
+    "video": "<video controls width='300'><source src='demo-choir.mp4' type='video/mp4'>Your browser does not support the video tag.</video>",
+    "topics": [
+      {
+        "title": "🎼 Singing in Harmony",
+        "content": "Understand the basics of vocal harmony and how to stay on your part while others sing different lines."
+      },
+      {
+        "title": "👂 Active Listening",
+        "content": "Develop the skill of listening and adjusting to the group while maintaining your own pitch and rhythm."
+      },
+      {
+        "title": "🫱 Conductor Cues",
+        "content": "Learn to follow visual cues from a conductor to stay in sync with the ensemble."
+      }
+    ]
+  }
+]
