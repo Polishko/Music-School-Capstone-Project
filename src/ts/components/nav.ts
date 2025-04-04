@@ -1,9 +1,18 @@
+/**
+ * Functions that handle navigation-related functionality for the site header menu.
+ */
+
 import { loadCourses } from "./galleryCore.js";
 import {
   displayMessage,
   getEnrolledCourses,
   getSessionStoredFilters,
 } from "../utils.js";
+
+/**
+ * Highlights the active navigation link based on the current page URL.
+ * Adds the "active" class to the matching link and removes it from all others.
+ */
 
 export function highlightActiveNavLink(): void {
   const links = document.querySelectorAll(
@@ -20,6 +29,12 @@ export function highlightActiveNavLink(): void {
     }
   });
 }
+
+/**
+ * Displays the user's enrolled courses in the gallery view.
+ * If no courses are enrolled, displays a fallback message and clears pagination.
+ * Otherwise, applies a "my-courses" filter and reloads the course list.
+ */
 
 export function showMyCourses(): void {
   const enrolled = getEnrolledCourses();
@@ -49,6 +64,11 @@ export function showMyCourses(): void {
     }
   }
 }
+
+/**
+ * Enables submenu toggle behavior for mobile navigation.
+ * Prevents default anchor behavior and toggles submenu visibility.
+ */
 
 export function makeSubMenuClickableOnMobile(): void {
   const subMenuBtn = document.querySelector(
