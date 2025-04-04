@@ -1,3 +1,12 @@
+/**
+ * Entry point for the gallery.html page.
+ * 
+ * - Initializes navigation link highlighting and submenu support for mobile.
+ * - Attaches event listeners for filtering, sorting, and resetting course data.
+ * - Handles "All Courses" and "My Courses" navigation behavior using local/session storage.
+ * - Loads course data based on session state or URL hash on page load.
+ */
+
 import {
   applyFilterEvents,
   applyFilterSortResetEvent,
