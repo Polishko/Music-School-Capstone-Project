@@ -68,9 +68,11 @@ project-root/
 │ ├── js-legacy/
 │ ├── scss/
 │ ├── ts/
+│
 │ ├── contact.html
 │ ├── gallery.html
 │ ├── index.html
+│
 ├── .gitignore
 ├── .stylelintignore
 ├── eslint.config.mjs
