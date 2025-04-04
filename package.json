@@ -11,7 +11,7 @@
     "lint:js": "eslint .",
     "lint:styles": "stylelint \"**/*.scss\"",
     "build:ts": "tsc",
-    "build": "npm run compile && npm run build:ts && mkdir -p dist/css && cp src/css/style.css dist/css/ && cp -r src/images dist/images && cp -r src/data dist/data && cp src/*.html dist/"
+    "build": "npm run compile && npm run build:ts && mkdir -p dist/css && cp src/css/style.css dist/css/ && cp -r src/images dist/ && cp -r src/data dist/ && cp src/*.html dist/"
   },
   "keywords": [],
   "author": "",
