@@ -46,7 +46,7 @@ Please install the following:
 3. Initialize and install dependencies:
    ```bash
    npm install
- ```
+   ```
 4. Compile Sass files:
    ```bash
    npm run compile
