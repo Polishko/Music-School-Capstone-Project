@@ -1,4 +1,10 @@
-import { Course, EnrolledCourses, FilterKey, Filters, SortCriteria } from "./types.js";
+import {
+  Course,
+  EnrolledCourses,
+  FilterKey,
+  Filters,
+  SortCriteria,
+} from "./types.js";
 
 export function displayMessage(
   container: string,
@@ -193,4 +199,3 @@ export function toggleDetailsParagraph(): void {
     });
   });
 }
-

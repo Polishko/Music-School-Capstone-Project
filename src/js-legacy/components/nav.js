@@ -42,8 +42,11 @@ export function showMyCourses() {
 }
 
 export function makeSubMenuClickableOnMobile() {
-  document.querySelector(".submenubtn")?.addEventListener("click", (e) => {
+  const subMenuBtn = document.querySelector(".submenubtn");
+  const subContent = document.querySelector(".submenu-content");
+
+  subMenuBtn?.addEventListener("click", (e) => {
     e.preventDefault();
-    document.querySelector(".submenu-content")?.classList.toggle("show");
+    subContent?.classList.toggle("show");
   });
 }

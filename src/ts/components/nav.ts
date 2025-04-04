@@ -51,8 +51,15 @@ export function showMyCourses(): void {
 }
 
 export function makeSubMenuClickableOnMobile(): void {
-  document.querySelector(".submenubtn")?.addEventListener("click", (e) => {
+  const subMenuBtn = document.querySelector(
+    ".submenubtn"
+  ) as HTMLAnchorElement | null;
+  const subContent = document.querySelector(
+    ".submenu-content"
+  ) as HTMLUListElement | null;
+
+  subMenuBtn?.addEventListener("click", (e: Event) => {
     e.preventDefault();
-    document.querySelector(".submenu-content")?.classList.toggle("show");
+    subContent?.classList.toggle("show");
   });
 }

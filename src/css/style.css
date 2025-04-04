@@ -64,7 +64,7 @@ body h3,
 body h4,
 body h5,
 body h6 {
-  font-family: "Georgia", sans-serif;
+  font-family: Georgia, "Inter", sans-serif;
   font-weight: 700;
   line-height: 1.2;
   color: #eaeaea;
@@ -233,7 +233,7 @@ body {
   gap: 1rem;
 }
 .header .header-top .logo {
-  font-family: "Georgia", sans-serif;
+  font-family: Georgia, "Inter", sans-serif;
   font-weight: 700;
   font-size: 3rem;
   letter-spacing: 0.5px;
@@ -274,7 +274,7 @@ body {
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
 }
 .header .promo-banner h2 {
-  font-family: "Georgia", sans-serif;
+  font-family: Georgia, "Inter", sans-serif;
   margin-bottom: 0.5rem;
   color: #a6b1e1;
 }

@@ -131,7 +131,6 @@ export function createHtmlItem(container, tag, classes, innerHtml = "") {
   return element;
 }
 
-
 export function toggleDetailsParagraph() {
   const allDetails = document.querySelectorAll("details");
 
@@ -146,4 +145,3 @@ export function toggleDetailsParagraph() {
     });
   });
 }
-

@@ -56,7 +56,7 @@ export function loadCourses(): void {
           processedData = searchCourses(processedData, searchTerm);
         }
 
-        const itemsPerPage = 8;
+        const itemsPerPage = 10;
         const totalPages = Math.ceil(processedData.length / itemsPerPage);
         const currentPage = 1;
 
@@ -95,7 +95,7 @@ export function loadCourses(): void {
 function renderCourseCards(
   data: Course[],
   currentPage = 1,
-  itemsPerPage = 8
+  itemsPerPage = 10
 ): void {
   const gallery = document.querySelector(".gallery") as HTMLElement | null;
   if (!gallery) return;

@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "npx sass src/scss/main.scss src/css/style.css",
     "lint": "npm run lint:js && npm run lint:styles",
     "lint:js": "eslint .",
     "lint:styles": "stylelint \"**/*.scss\"",
-    "build:ts": "tsc"
+    "build:ts": "tsc",
+    "build": "npm run compile && npm run build:ts && mkdir -p dist/css && cp src/css/style.css dist/css/ && cp -r src/images dist/ && cp -r src/data dist/ && cp src/*.html dist/"
   },
   "keywords": [],
   "author": "",
