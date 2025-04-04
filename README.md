@@ -7,6 +7,7 @@
   - [📚 Table of Contents](#-table-of-contents)
   - [📚 About](#-about)
   - [📦 Prerequisites](#-prerequisites)
+  - [🖼️ Assets \& Credits](#️-assets--credits)
   - [🌐 Live Demo](#-live-demo)
   - [📦🚀 Project Setup](#-project-setup)
   - [📁 Folder Structure](#-folder-structure)
@@ -19,12 +20,12 @@
     - [🧭 Future Improvements](#-future-improvements)
 
 
-## <a name="about"></a>📚 About
+## 📚 About
 This is a responsive web application project for a music school learning platform, built using HTML, Sass (SCSS), and TypeScript. The project also includes a legacy folder with older vanilla JavaScript files for reference. It uses local JSON data to populate course content.
 
 ![Screenshot of Gallery Page](src/images/screenshots/screenshot.png)
 
-## <a name="prerequisites"></a>📦 Prerequisites
+## 📦 Prerequisites
 
 Please install the following:
 
@@ -34,28 +35,34 @@ Please install the following:
 
 ---
 
+## 🖼️ Assets & Credits
+
+- Course images used in this project are sourced from [Unsplash](https://unsplash.com/) and are free to use under the Unsplash license.
+
+
 ## 🌐 Live Demo
 
 🔗 [Click here to view the deployed app](https://my-music-app-uca8.onrender.com/)
 
 
-## <a name="project-setup"></a>📦🚀 Project Setup
+## 📦🚀 Project Setup
 
 1. Clone the repository
 2. Open the folder in VS Code
-3. Initialize and install dependencies:
+3. **Make sure you're in the root folder of the project (where `package.json` is located)**
+4. Initialize and install dependencies:
    ```bash
    npm install
    ```
-4. Compile Sass files:
+5. Compile Sass files:
    ```bash
    npm run compile
    ```
-5. Compile TS files:
+6. Compile TS files:
    ```bash
    npm run build:ts
    ```
-6. Right-click `index.html` and choose **"Open with Live Server"**
+7. Right-click `index.html` and choose **"Open with Live Server"**
    > 💡 Requires the [Live Server VS Code extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
 ## 📁 Folder Structure
