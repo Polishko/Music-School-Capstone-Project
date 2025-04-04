@@ -12,6 +12,19 @@ import {
 
 import { Course, Filters } from "../types.js";
 
+/**
+ * The core functions used in the gallery.html page script 
+ */
+
+/**
+ * Fetches course data asynchronously from a local JSON file.
+ * If the request is rejected or an error occurs, displays an appropriate message to inform the user.
+ * If the response returns data, applies filters (if any), search criteria (if any), and sort criteria (if any).
+ * If no data is returned, informs the user with a message.
+ * If data is available, sets items per page, calls a function to render course data,
+ * attaches detail toggling functionality, and calls a function to render pagination controls.
+ */
+
 export function loadCourses(): void {
   fetch("data/courses.json")
     .then((response) => {
@@ -91,6 +104,17 @@ export function loadCourses(): void {
       );
     });
 }
+
+/**
+ * Renders a paginated set of course cards into the gallery container. 
+ * Slices the processed course data based on the current page and item limit.
+ * Asynchronously injects each course as an <article> element with all metadata.
+ * Handles topic toggling, enroll button behavior, and visual states.
+ * 
+ * @param data - The processed course data returned in the loadCourses function 
+ * @param currentPage - The currently active page, (defaults to 1).
+ * @param itemsPerPage - The number of courses displayed per page (defaults to 10)
+ */
 
 function renderCourseCards(
   data: Course[],
@@ -231,6 +255,17 @@ function renderCourseCards(
     }
   }
 }
+
+/**
+ * Renders pagination buttons based on the number of total pages.
+ * Highlights the active page and sets click behavior to update courses and pagination state.
+ * On button click, triggers re-rendering of the course cards and pagination.
+ *
+ * @param data - The processed course data returned from the loadCourses function
+ * @param totalPages - The total number of pages based on the number of courses and items per page
+ * @param currentPage - The currently active page (defaults to 1)
+ * @param itemsPerPage - The number of courses displayed per page (defaults to 10)
+ */
 
 function renderPaginationData(
   data: Course[],
