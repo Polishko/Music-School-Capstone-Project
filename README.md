@@ -36,7 +36,7 @@ Please install the following:
 
 ## 🌐 Live Demo
 
-🔗 [Click here to view the deployed app](https:)
+🔗 [Click here to view the deployed app](https://my-music-app-uca8.onrender.com/)
 
 
 ## <a name="project-setup"></a>📦🚀 Project Setup
