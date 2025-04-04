@@ -60,18 +60,19 @@ Please install the following:
 
 ## 📁 Folder Structure
 
+```txt
 project-root/
 ├── src/
-│ ├── css/
-│ ├── data/
-│ ├── images/
-│ ├── js-legacy/
-│ ├── scss/
-│ ├── ts/
+│   ├── css/
+│   ├── data/
+│   ├── images/
+│   ├── js-legacy/
+│   ├── scss/
+│   ├── ts/
 │
-│ ├── contact.html
-│ ├── gallery.html
-│ ├── index.html
+│   ├── contact.html
+│   ├── gallery.html
+│   ├── index.html
 │
 ├── .gitignore
 ├── .stylelintignore
@@ -81,7 +82,7 @@ project-root/
 ├── README.md
 ├── stylelint.config.cjs
 ├── tsconfig.json
-
+```
 ## Linting
 
 To check code quality:
