@@ -130,3 +130,20 @@ export function createHtmlItem(container, tag, classes, innerHtml = "") {
 
   return element;
 }
+
+
+export function toggleDetailsParagraph() {
+  const allDetails = document.querySelectorAll("details");
+
+  allDetails.forEach((detail) => {
+    detail.addEventListener("click", (e) => {
+      const clickedElement = e.target;
+
+      if (!clickedElement.closest("summary")) {
+        detail.open = !detail.open;
+        e.preventDefault();
+      }
+    });
+  });
+}
+
