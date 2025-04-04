@@ -1,12 +1,22 @@
-import { plusSlides, currentSlide } from "./components/slider.js";
+import { initSlider } from "./components/slider.js";
 import { highlightActiveNavLink } from "./components/nav.js";
 
-document.addEventListener("DOMContentLoaded", (): void => {
-  const next = document.querySelector(".next") as HTMLAnchorElement | null;
-  next?.addEventListener("click", () => plusSlides(1));
+/**
+ * Entry point for the Home page.
+  */
 
-  const prev = document.querySelector(".prev") as HTMLAnchorElement | null;
-  prev?.addEventListener("click", () => plusSlides(-1));
+ /** 
+ * - Initializes the image slider and assigns event listeners for:
+ *    - Next/previous slide navigation
+ *    - Dot-based navigation for direct slide selection
+ * - Highlights the active navigation link based on the current page URL.
+ */
+
+document.addEventListener("DOMContentLoaded", (): void => {
+  const slider = initSlider();
+
+  document.querySelector(".prev")?.addEventListener("click", slider.prev);
+  document.querySelector(".next")?.addEventListener("click", slider.next);
 
   const images = document.querySelectorAll(
     ".demo"
@@ -14,7 +24,7 @@ document.addEventListener("DOMContentLoaded", (): void => {
 
   if (images.length) {
     images.forEach((dot, idx) => {
-      dot.addEventListener("click", () => currentSlide(idx + 1));
+      dot.addEventListener("click", () => slider.goTo(idx + 1));
     });
   }
 
