@@ -7,6 +7,7 @@ import {
   getSessionStoredFilters,
   searchCourses,
   sortCourses,
+  toggleDetailsParagraph,
 } from "../utils.js";
 
 export function loadCourses() {
@@ -56,6 +57,7 @@ export function loadCourses() {
           displayMessage("gallery", "p", "message info", "No courses found.");
         } else {
           renderCourseCards(processedData, currentPage, itemsPerPage);
+          toggleDetailsParagraph();
           renderPaginationData(
             processedData,
             totalPages,
