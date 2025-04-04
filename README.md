@@ -83,6 +83,7 @@ project-root/
 ├── stylelint.config.cjs
 ├── tsconfig.json
 ```
+
 ## Linting
 
 To check code quality:
@@ -101,6 +102,9 @@ npm run lint:styles # Lint SCSS styles
 - **Vanilla JavaScript** – Legacy components and lightweight scripting
 - **Google Maps Embed API** – Map integration for contact page
 - **ESLint & Stylelint** – Code quality and consistency enforcement
+- The application is primarily built with **TypeScript**, but a `js-legacy` folder is included for reference.  
+- All TypeScript and utility functions are fully documented using JSDoc-style comments.
+
 
 ## 🧩 Project Features by Requirement
 
