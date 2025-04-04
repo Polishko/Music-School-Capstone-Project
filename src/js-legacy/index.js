@@ -1,16 +1,19 @@
-import { plusSlides, currentSlide } from "./components/slider.js";
+import { initSlider } from "./components/slider.js";
 import { highlightActiveNavLink } from "./components/nav.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  document
-    .querySelector(".next")
-    ?.addEventListener("click", () => plusSlides(1));
-  document
-    .querySelector(".prev")
-    ?.addEventListener("click", () => plusSlides(-1));
-  document.querySelectorAll(".demo").forEach((dot, idx) => {
-    dot.addEventListener("click", () => currentSlide(idx + 1));
-  });
+  const slider = initSlider();
+
+  document.querySelector(".prev")?.addEventListener("click", slider.prev);
+  document.querySelector(".next")?.addEventListener("click", slider.next);
+
+  const images = document.querySelectorAll(".demo");
+
+  if (images.length) {
+    images.forEach((dot, idx) => {
+      dot.addEventListener("click", () => slider.goTo(idx + 1));
+    });
+  }
 
   highlightActiveNavLink();
 });
