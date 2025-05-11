@@ -203,6 +203,8 @@ function renderCourseCards(
                   class="card-image"
                   src="./images/lessons/${course.image}"
                   alt="${course.image.replace(".jpg", "")}"
+                  width="300px"
+                  height="300px"
               />
       
               <p class="card-text">
